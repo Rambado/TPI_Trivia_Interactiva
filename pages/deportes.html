@@ -22,61 +22,61 @@
         <form id="Deportes">
 
             <h2>PREGUNTA 1</h2>
-            <input type="radio" name="opcion_1" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_1" value="1">Opción 1
             </br><input type="radio" name="opcion_1" value="2">Opción 2
             </br><input type="radio" name="opcion_1" value="3">Opción 3
             </br><input type="radio" name="opcion_1" value="4">Opción 4
 
             <h2>PREGUNTA 2</h2>
-            <input type="radio" name="opcion_2" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_2" value="1">Opción 1
             </br><input type="radio" name="opcion_2" value="2">Opción 2
             </br><input type="radio" name="opcion_2" value="3">Opción 3
             </br><input type="radio" name="opcion_2" value="4">Opción 4
 
             <h2>PREGUNTA 3</h2>
-            <input type="radio" name="opcion_3" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_3" value="1">Opción 1
             </br><input type="radio" name="opcion_3" value="2">Opción 2
             </br><input type="radio" name="opcion_3" value="3">Opción 3
             </br><input type="radio" name="opcion_3" value="4">Opción 4
 
             <h2>PREGUNTA 4</h2>
-            <input type="radio" name="opcion_4" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_4" value="1">Opción 1
             </br><input type="radio" name="opcion_4" value="2">Opción 2
             </br><input type="radio" name="opcion_4" value="3">Opción 3
             </br><input type="radio" name="opcion_4" value="4">Opción 4
 
             <h2>PREGUNTA 5</h2>
-            <input type="radio" name="opcion_5" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_5" value="1">Opción 1
             </br><input type="radio" name="opcion_5" value="2">Opción 2
             </br><input type="radio" name="opcion_5" value="3">Opción 3
             </br><input type="radio" name="opcion_5" value="4">Opción 4
 
             <h2>PREGUNTA 6</h2>
-            <input type="radio" name="opcion_6" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_6" value="1">Opción 1
             </br><input type="radio" name="opcion_6" value="2">Opción 2
             </br><input type="radio" name="opcion_6" value="3">Opción 3
             </br><input type="radio" name="opcion_6" value="4">Opción 4
 
             <h2>PREGUNTA 7</h2>
-            <input type="radio" name="opcion_7" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_7" value="1">Opción 1
             </br><input type="radio" name="opcion_7" value="2">Opción 2
             </br><input type="radio" name="opcion_7" value="3">Opción 3
             </br><input type="radio" name="opcion_7" value="4">Opción 4
 
             <h2>PREGUNTA 8</h2>
-            <input type="radio" name="opcion_8" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_8" value="1">Opción 1
             </br><input type="radio" name="opcion_8" value="2">Opción 2
             </br><input type="radio" name="opcion_8" value="3">Opción 3
             </br><input type="radio" name="opcion_8" value="4">Opción 4
 
             <h2>PREGUNTA 9</h2>
-            <input type="radio" name="opcion_9" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_9" value="1">Opción 1
             </br><input type="radio" name="opcion_9" value="2">Opción 2
             </br><input type="radio" name="opcion_9" value="3">Opción 3
             </br><input type="radio" name="opcion_9" value="4">Opción 4
 
             <h2>PREGUNTA 10</h2>
-            <input type="radio" name="opcion_10" value="1">Opción 1
+            <input class="pregunta" type="radio" name="opcion_10" value="1">Opción 1
             </br><input type="radio" name="opcion_10" value="2">Opción 2
             </br><input type="radio" name="opcion_10" value="3">Opción 3
             </br><input type="radio" name="opcion_10" value="4">Opción 4
@@ -88,11 +88,16 @@
         </form>
         
         <script>
+            const preguntas=document.getElementsByClassName("pregunta");
             const form=document.getElementById("Deportes");
             form.addEventListener("submit",function(event){
                 event.preventDefault();
                 console.log("hola mundo")
-            });
+            const formData=new FormData(form);
+            for(i=0;i<preguntas.length;i++){
+                console.log (`respuesta pregunta ${i+1}`,formData.get(preguntas[i].name))
+            }
+        });
         </script>
     </main>
 
