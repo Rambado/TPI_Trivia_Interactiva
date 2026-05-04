@@ -4,11 +4,11 @@
     height: 100%;
 }
 
-#conteiner{
+#conteiner{ 
+    display:grid;
     background-color: lightgray;
     grid-template-columns: auto;
     grid-template-rows: 15% 10% auto 10%;
-    display:grid;
     width: 100%;
 }
 
@@ -54,3 +54,12 @@ img {
     height: 30px;
 }
 
+form{
+    display: grid;
+    grid-template-rows: 10px 10px 10px 10px 10px 10px 10px 10px 10px 10px;
+}
+
+main{
+    display: grid;
+    background-color:lightgrey;
+}
