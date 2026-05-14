@@ -33,7 +33,7 @@ nav {
 ul{
     list-style: none;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     justify-content:space-evenly;
 }
 
@@ -63,4 +63,13 @@ form{
 main{
     display: grid;
     background-color:lightgrey;
+}
+
+.tituloPagina{
+    text-align: center;
+    padding: 20px;
+}
+
+li:hover {
+    transform: scale(0.9);
 }
