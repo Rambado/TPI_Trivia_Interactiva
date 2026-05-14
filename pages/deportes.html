@@ -4,105 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cerebro Curioso</title>
-    
+    <link href="../styles.css/paginas.css" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <h1>Cerebro Curioso</h1>
-    </header>
+     <div id="conteiner">
+        <header>
+            <h1>Cerebro Curioso</h1>
+        </header>
 
-    <nav>
-        <a href="./pages/deportes.html">Deportes</a>
-        <a href="./pages/geografia.html">Geografia</a>
-        <a href="./pages/historia.html">Historia</a>
-        <a href="./pages/musica.html">Musica</a>
-    </nav>
+        <nav>
+            <ul>
+                <li><img src="/assets/icons/deportes.jpg" alt="Pelotas"><a href="./deportes.html">Deportes</a></li>
+                <li><img src="/assets/icons/geografia.jpg" alt="Globo Terraqueo"><a href="./geografia.html">Geografia</a></li>
+                <li> <img src="/assets/icons/history.jpg" alt="Libro abierto"><a href="./historia.html">Historia</a></li>
+                <li><img src="/assets/icons/musica.jpg" alt="Nota musical"><a href="./musica.html">Musica</a></li>
+            </ul>
+        </nav>
 
-    <main>
-        <form id="Deportes">
+        <main>
+            <h1 class="subtitulo">Preguntas de Deportes</h1>
+            <form id="Deportes">
+                <script>
+                    let contenidohtml=""
+                    for(let i=0; i<10;i++){
+                        contenidohtml+=`<h2>PREGUNTA ${i+1}</h2>`
+                        for(let j=0; j<4;j++){
+                            if(j==0){
+                                contenidohtml+=`<label><input class="pregunta" type="radio" name="opcion_${i+1}" value="${j+1}"> Opción ${j+1}</label><br>`
+                            }
+                            else{
+                                contenidohtml+=`<label><input type="radio" name="opcion_${i+1}" value="${j+1}"> Opción ${j+1}</label><br>`
+                            }                    
+                        }   
+                    }
+                    const formulario=document.getElementById("Deportes");
+                    formulario.innerHTML=contenidohtml
+                </script>
 
-            <h2>PREGUNTA 1</h2>
-            <input class="pregunta" type="radio" name="opcion_1" value="1">Opción 1
-            </br><input type="radio" name="opcion_1" value="2">Opción 2
-            </br><input type="radio" name="opcion_1" value="3">Opción 3
-            </br><input type="radio" name="opcion_1" value="4">Opción 4
-
-            <h2>PREGUNTA 2</h2>
-            <input class="pregunta" type="radio" name="opcion_2" value="1">Opción 1
-            </br><input type="radio" name="opcion_2" value="2">Opción 2
-            </br><input type="radio" name="opcion_2" value="3">Opción 3
-            </br><input type="radio" name="opcion_2" value="4">Opción 4
-
-            <h2>PREGUNTA 3</h2>
-            <input class="pregunta" type="radio" name="opcion_3" value="1">Opción 1
-            </br><input type="radio" name="opcion_3" value="2">Opción 2
-            </br><input type="radio" name="opcion_3" value="3">Opción 3
-            </br><input type="radio" name="opcion_3" value="4">Opción 4
-
-            <h2>PREGUNTA 4</h2>
-            <input class="pregunta" type="radio" name="opcion_4" value="1">Opción 1
-            </br><input type="radio" name="opcion_4" value="2">Opción 2
-            </br><input type="radio" name="opcion_4" value="3">Opción 3
-            </br><input type="radio" name="opcion_4" value="4">Opción 4
-
-            <h2>PREGUNTA 5</h2>
-            <input class="pregunta" type="radio" name="opcion_5" value="1">Opción 1
-            </br><input type="radio" name="opcion_5" value="2">Opción 2
-            </br><input type="radio" name="opcion_5" value="3">Opción 3
-            </br><input type="radio" name="opcion_5" value="4">Opción 4
-
-            <h2>PREGUNTA 6</h2>
-            <input class="pregunta" type="radio" name="opcion_6" value="1">Opción 1
-            </br><input type="radio" name="opcion_6" value="2">Opción 2
-            </br><input type="radio" name="opcion_6" value="3">Opción 3
-            </br><input type="radio" name="opcion_6" value="4">Opción 4
-
-            <h2>PREGUNTA 7</h2>
-            <input class="pregunta" type="radio" name="opcion_7" value="1">Opción 1
-            </br><input type="radio" name="opcion_7" value="2">Opción 2
-            </br><input type="radio" name="opcion_7" value="3">Opción 3
-            </br><input type="radio" name="opcion_7" value="4">Opción 4
-
-            <h2>PREGUNTA 8</h2>
-            <input class="pregunta" type="radio" name="opcion_8" value="1">Opción 1
-            </br><input type="radio" name="opcion_8" value="2">Opción 2
-            </br><input type="radio" name="opcion_8" value="3">Opción 3
-            </br><input type="radio" name="opcion_8" value="4">Opción 4
-
-            <h2>PREGUNTA 9</h2>
-            <input class="pregunta" type="radio" name="opcion_9" value="1">Opción 1
-            </br><input type="radio" name="opcion_9" value="2">Opción 2
-            </br><input type="radio" name="opcion_9" value="3">Opción 3
-            </br><input type="radio" name="opcion_9" value="4">Opción 4
-
-            <h2>PREGUNTA 10</h2>
-            <input class="pregunta" type="radio" name="opcion_10" value="1">Opción 1
-            </br><input type="radio" name="opcion_10" value="2">Opción 2
-            </br><input type="radio" name="opcion_10" value="3">Opción 3
-            </br><input type="radio" name="opcion_10" value="4">Opción 4
-
-            </br>
-            </br>
-            </br><input type="submit" value="enviar">
+                </br>
+                </br>
+                </br><input type="submit" value="enviar">
                 <input type="reset" value="borrar">
-        </form>
-        
-        <script>
-            const preguntas=document.getElementsByClassName("pregunta");
-            const form=document.getElementById("Deportes");
-            form.addEventListener("submit",function(event){
-                event.preventDefault();
-                console.log("hola mundo")
-            const formData=new FormData(form);
-            for(i=0;i<preguntas.length;i++){
-                console.log (`respuesta pregunta ${i+1}`,formData.get(preguntas[i].name))
-            }
-        });
-        </script>
-    </main>
+            </form>
 
-    <footer>
-        <p>1TUP5 - Programación II - Año 2026</p>
-    </footer>
+            <script>
+                const preguntas = document.getElementsByClassName("pregunta");
+                const form = document.getElementById("Deportes");
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    console.log("hola mundo")
+                    const formData = new FormData(form);
+                    for (i = 0; i < preguntas.length; i++) {
+                        console.log(`respuesta pregunta ${i + 1}`, formData.get(preguntas[i].name))
+                    }
+                });
+            </script>
+        </main>
+
+        <footer>
+            <p>1TUP5 - Programación II - Año 2026</p>
+        </footer>
+    </div>
 </body>
 </html>
