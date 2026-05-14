@@ -56,7 +56,8 @@ img {
 
 form{
     display: grid;
-    grid-template-rows: 10px 10px 10px 10px 10px 10px 10px 10px 10px 10px;
+    grid-template-rows: auto;
+    text-align: center;
 }
 
 main{
