@@ -1,48 +1,54 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-#conteiner{
-    background-color: lightgray;
-    grid-template-columns: auto;
-    grid-template-rows: 15% 10% auto 10%;
-    display:grid;
-    width: 100%;
+#conteiner {
+   display:grid;
+    grid-template-rows:100px auto 1fr 60px;
+    min-height:100vh;
+    background-color:lightgray;
 }
 
-header{
-    color: white;
-    text-align: center;
-    line-height: 100px;
-    display: block;
-    background-color: rgb(48, 127, 153);
-    height: 100px;
-    width: 100%;
-    margin: 0px;
+header {
+    background-color:rgb(48,127,153);
+    color:white;
+    text-align:center;
+    line-height:100px;
+}
+
+header h1{
+    font-size: 40px;
 }
 
 nav {
     background-color: rgb(157, 156, 156);
-    text-align: center;
-    line-height: 60px;
-    
+    height: auto;
 }
 
-ul{
-    list-style: none;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    justify-content:space-evenly;
+ul {
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    text-align:center;
 }
 
-a{
-    font-size: 20px;
-    color: white;
+li{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    line-height:60px;
 }
-   
-footer{
+
+a {
+   text-decoration:none;
+    color:white;
+    font-size:20px;
+}
+
+footer {
     color: white;
     background-color: rgb(48, 127, 153);
     line-height: 60px;
@@ -55,6 +61,65 @@ img {
 }
 
 li:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
+main {
+    display: grid;
+    background-color: lightgrey;
+}
+
+mark {
+    color: white;
+    background-color: rgb(48, 127, 153);
+}
+
+.articulos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+article{
+    padding: 40px;
+}
+
+li{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+}
+
+@media (max-width:768px){
+
+    ul{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        height:auto;
+    }
+
+    li{
+        padding:10px;
+    }
+
+    .articulos{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:28px;
+    }
+
+    a{
+        font-size:18px;
+    }
+
+    article{
+        padding:20px;
+    }
+
+}
